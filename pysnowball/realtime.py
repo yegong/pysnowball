@@ -18,5 +18,5 @@ def pankou(symbol):
     return utls.fetch(url)
 
 
-def kline(symbol,period='day',count=284):
-    return utls.fetch(api_ref.kline.format(symbol, int(time.time()*1000), period, count))
+def kline(symbol,period='day',count=284,kline_type='before'):
+    return utls.fetch(api_ref.kline.format(symbol, int(time.time()*1000), period, kline_type, count))
